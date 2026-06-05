@@ -1,0 +1,23 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicle Type Definition -->
+    <vType id="type_car" accel="2.6" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="13.89" carFollowModel="Krauss"/>
+
+    <!-- Route Definitions -->
+    <route id="r_west_east" edges="W2C C2E"/>
+    <route id="r_east_west" edges="E2C C2W"/>
+    <route id="r_north_south" edges="N2C C2S"/>
+    <route id="r_south_north" edges="S2C C2N"/>
+
+    <!-- Flows representing continuous traffic demand -->
+    <!-- W -> E flow (approx 1 vehicle every 6 seconds) -->
+    <flow id="flow_we" type="type_car" route="r_west_east" begin="0" end="3600" period="6" departSpeed="max" departLane="best"/>
+    
+    <!-- E -> W flow (approx 1 vehicle every 8 seconds) -->
+    <flow id="flow_ew" type="type_car" route="r_east_west" begin="0" end="3600" period="8" departSpeed="max" departLane="best"/>
+    
+    <!-- N -> S flow (approx 1 vehicle every 10 seconds) -->
+    <flow id="flow_ns" type="type_car" route="r_north_south" begin="0" end="3600" period="10" departSpeed="max" departLane="best"/>
+    
+    <!-- S -> N flow (approx 1 vehicle every 12 seconds) -->
+    <flow id="flow_sn" type="type_car" route="r_south_north" begin="0" end="3600" period="12" departSpeed="max" departLane="best"/>
+</routes>
