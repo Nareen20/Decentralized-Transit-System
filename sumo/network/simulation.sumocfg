@@ -1,6 +1,7 @@
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/showconfiguration.xsd">
     <input>
-        <net-file value="intersection.net.xml"/>
+        <net-file value="network.net.xml"/>
         <route-files value="routes.rou.xml"/>
     </input>
     <time>
@@ -8,8 +9,13 @@
         <end value="3600"/>
         <step-length value="1.0"/>
     </time>
-    <report>
-        <verbose value="true"/>
+    <processing>
+        <!-- Prevent collisions by disabling teleporting, allowing realistic queueing -->
         <no-step-log value="true"/>
-    </report>
+        <time-to-teleport value="-1"/>
+    </processing>
+    <gui_only>
+        <!-- Auto start GUI if opened in SUMO-GUI -->
+        <start value="true"/>
+    </gui_only>
 </configuration>

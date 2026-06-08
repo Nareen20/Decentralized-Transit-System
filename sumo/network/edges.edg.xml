@@ -1,13 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
-    <!-- Incoming roads to Center (C) -->
-    <edge id="N2C" from="N" to="C" numLanes="2" speed="13.89"/>
-    <edge id="S2C" from="S" to="C" numLanes="2" speed="13.89"/>
-    <edge id="E2C" from="E" to="C" numLanes="2" speed="13.89"/>
-    <edge id="W2C" from="W" to="C" numLanes="2" speed="13.89"/>
+    <!-- Horizontal Row 0 Connections -->
+    <edge id="E_west0_to_n00" from="west_0" to="node_0_0" numLanes="2" speed="13.89"/>
+    <edge id="E_n00_to_west0" from="node_0_0" to="west_0" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n00_to_n10" from="node_0_0" to="node_1_0" numLanes="2" speed="13.89"/>
+    <edge id="E_n10_to_n00" from="node_1_0" to="node_0_0" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n10_to_east0" from="node_1_0" to="east_0" numLanes="2" speed="13.89"/>
+    <edge id="E_east0_to_n10" from="east_0" to="node_1_0" numLanes="2" speed="13.89"/>
 
-    <!-- Outgoing roads from Center (C) -->
-    <edge id="C2N" from="C" to="N" numLanes="2" speed="13.89"/>
-    <edge id="C2S" from="C" to="S" numLanes="2" speed="13.89"/>
-    <edge id="C2E" from="C" to="E" numLanes="2" speed="13.89"/>
-    <edge id="C2W" from="C" to="W" numLanes="2" speed="13.89"/>
+    <!-- Horizontal Row 1 Connections -->
+    <edge id="E_west1_to_n01" from="west_1" to="node_0_1" numLanes="2" speed="13.89"/>
+    <edge id="E_n01_to_west1" from="node_0_1" to="west_1" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n01_to_n11" from="node_0_1" to="node_1_1" numLanes="2" speed="13.89"/>
+    <edge id="E_n11_to_n01" from="node_1_1" to="node_0_1" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n11_to_east1" from="node_1_1" to="east_1" numLanes="2" speed="13.89"/>
+    <edge id="E_east1_to_n11" from="east_1" to="node_1_1" numLanes="2" speed="13.89"/>
+
+    <!-- Vertical Column 0 Connections -->
+    <edge id="E_south0_to_n00" from="south_0" to="node_0_0" numLanes="2" speed="13.89"/>
+    <edge id="E_n00_to_south0" from="node_0_0" to="south_0" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n00_to_n01" from="node_0_0" to="node_0_1" numLanes="2" speed="13.89"/>
+    <edge id="E_n01_to_n00" from="node_0_1" to="node_0_0" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n01_to_north0" from="node_0_1" to="north_0" numLanes="2" speed="13.89"/>
+    <edge id="E_north0_to_n01" from="north_0" to="node_0_1" numLanes="2" speed="13.89"/>
+
+    <!-- Vertical Column 1 Connections -->
+    <edge id="E_south1_to_n10" from="south_1" to="node_1_0" numLanes="2" speed="13.89"/>
+    <edge id="E_n10_to_south1" from="node_1_0" to="south_1" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n10_to_n11" from="node_1_0" to="node_1_1" numLanes="2" speed="13.89"/>
+    <edge id="E_n11_to_n10" from="node_1_1" to="node_1_0" numLanes="2" speed="13.89"/>
+    
+    <edge id="E_n11_to_north1" from="node_1_1" to="north_1" numLanes="2" speed="13.89"/>
+    <edge id="E_north1_to_n11" from="north_1" to="node_1_1" numLanes="2" speed="13.89"/>
 </edges>

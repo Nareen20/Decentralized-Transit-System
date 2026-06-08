@@ -1,10 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
-    <!-- Central Intersection (Traffic Light Controlled) -->
-    <node id="C" x="0.0" y="0.0" type="traffic_light"/>
-    
-    <!-- Outer Boundary Nodes (Priority Junctions) -->
-    <node id="N" x="0.0" y="200.0" type="priority"/>
-    <node id="S" x="0.0" y="-200.0" type="priority"/>
-    <node id="E" x="200.0" y="0.0" type="priority"/>
-    <node id="W" x="-200.0" y="0.0" type="priority"/>
+    <!-- Central Traffic-Light Controlled Intersections -->
+    <node id="node_0_0" x="0" y="0" type="traffic_light"/>
+    <node id="node_0_1" x="0" y="500" type="traffic_light"/>
+    <node id="node_1_0" x="500" y="0" type="traffic_light"/>
+    <node id="node_1_1" x="500" y="500" type="traffic_light"/>
+
+    <!-- Boundary Source/Sink Nodes -->
+    <node id="west_0" x="-500" y="0" type="priority"/>
+    <node id="west_1" x="-500" y="500" type="priority"/>
+    <node id="east_0" x="1000" y="0" type="priority"/>
+    <node id="east_1" x="1000" y="500" type="priority"/>
+    <node id="north_0" x="0" y="1000" type="priority"/>
+    <node id="north_1" x="500" y="1000" type="priority"/>
+    <node id="south_0" x="0" y="-500" type="priority"/>
+    <node id="south_1" x="500" y="-500" type="priority"/>
 </nodes>
