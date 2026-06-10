@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicle Type Definitions -->
+    <vType id="car" vClass="passenger" length="5.0" minGap="2.5" maxSpeed="13.89" color="1,1,0" accel="2.6" decel="4.5"/>
+    <vType id="bus" vClass="bus" length="12.0" minGap="3.0" maxSpeed="11.11" color="0,0.5,1" guiShape="bus" accel="1.2" decel="4.0"/>
+    <vType id="ambulance" vClass="emergency" length="6.0" minGap="2.0" maxSpeed="22.22" color="1,0,0" guiShape="emergency" speedFactor="1.2" accel="4.0" decel="6.0"/>
+
+    <!-- Route Definitions -->
+    <route id="R_W0_E0" edges="E_west0_to_n00 E_n00_to_n10 E_n10_to_east0"/>
+    <route id="R_W1_E1" edges="E_west1_to_n01 E_n01_to_n11 E_n11_to_east1"/>
+    <route id="R_E0_W0" edges="E_east0_to_n10 E_n10_to_n00 E_n00_to_west0"/>
+    <route id="R_E1_W1" edges="E_east1_to_n11 E_n11_to_n01 E_n01_to_west1"/>
+    <route id="R_S0_N0" edges="E_south0_to_n00 E_n00_to_n01 E_n01_to_north0"/>
+    <route id="R_S1_N1" edges="E_south1_to_n10 E_n10_to_n11 E_n11_to_north1"/>
+    <route id="R_N0_S0" edges="E_north0_to_n01 E_n01_to_n00 E_n00_to_south0"/>
+    <route id="R_N1_S1" edges="E_north1_to_n11 E_n11_to_n10 E_n10_to_south1"/>
+    <route id="R_W0_N0" edges="E_west0_to_n00 E_n00_to_n01 E_n01_to_north0"/>
+    <route id="R_E1_S1" edges="E_east1_to_n11 E_n11_to_n10 E_n10_to_south1"/>
+
+    <!-- Flows for Congestion Scenario (Highly frequent car flows) -->
+    <flow id="flow_car_w0_e0" type="car" route="R_W0_E0" begin="0" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_e0_w0" type="car" route="R_E0_W0" begin="1" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_s0_n0" type="car" route="R_S0_N0" begin="2" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_n0_s0" type="car" route="R_N0_S0" begin="3" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_w1_e1" type="car" route="R_W1_E1" begin="4" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_s1_n1" type="car" route="R_S1_N1" begin="5" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_e1_w1" type="car" route="R_E1_W1" begin="6" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_n1_s1" type="car" route="R_N1_S1" begin="7" end="3600" period="4" departSpeed="max"/>
+    <flow id="flow_car_w0_n0" type="car" route="R_W0_N0" begin="8" end="3600" period="6" departSpeed="max"/>
+    <flow id="flow_car_e1_s1" type="car" route="R_E1_S1" begin="9" end="3600" period="6" departSpeed="max"/>
+
+    <!-- Bus Flows -->
+    <flow id="flow_bus_w0_e0" type="bus" route="R_W0_E0" begin="30" end="3600" period="120" departSpeed="max"/>
+    <flow id="flow_bus_s0_n0" type="bus" route="R_S0_N0" begin="45" end="3600" period="150" departSpeed="max"/>
+    <flow id="flow_bus_e1_w1" type="bus" route="R_E1_W1" begin="60" end="3600" period="120" departSpeed="max"/>
+    <flow id="flow_bus_n1_s1" type="bus" route="R_N1_S1" begin="90" end="3600" period="150" departSpeed="max"/>
+</routes>
